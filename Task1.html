@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteForge Solutions Team</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
+
+        *,
+        *:before,
+        *:after {
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        
+        body {
+          margin: 0;
+        }
+        
+        .wk-desk-1 {
+          width: 8.333333%;
+        }
+        
+        .wk-desk-2 {
+          width: 16.666667%;
+        }
+        
+        .wk-desk-3 {
+          width: 25%;
+        }
+        
+        .wk-desk-4 {
+          width: 33.333333%;
+        }
+        
+        .wk-desk-5 {
+          width: 41.666667%;
+        }
+        
+        .wk-desk-6 {
+          width: 50%;
+        }
+        
+        .wk-desk-7 {
+          width: 58.333333%;
+        }
+        
+        .wk-desk-8 {
+          width: 66.666667%;
+        }
+        
+        .wk-desk-9 {
+          width: 75%;
+        }
+        
+        .wk-desk-10 {
+          width: 83.333333%;
+        }
+        
+        .wk-desk-11 {
+          width: 91.666667%;
+        }
+        
+        .wk-desk-12 {
+          width: 100%;
+        }
+        
+        @media (max-width: 1024px) {
+          .wk-ipadp-1 {
+            width: 8.333333%;
+          }
+        
+          .wk-ipadp-2 {
+            width: 16.666667%;
+          }
+        
+          .wk-ipadp-3 {
+            width: 25%;
+          }
+        
+          .wk-ipadp-4 {
+            width: 33.333333%;
+          }
+        
+          .wk-ipadp-5 {
+            width: 41.666667%;
+          }
+        
+          .wk-ipadp-6 {
+            width: 50%;
+          }
+        
+          .wk-ipadp-7 {
+            width: 58.333333%;
+          }
+        
+          .wk-ipadp-8 {
+            width: 66.666667%;
+          }
+        
+          .wk-ipadp-9 {
+            width: 75%;
+          }
+        
+          .wk-ipadp-10 {
+            width: 83.333333%;
+          }
+        
+          .wk-ipadp-11 {
+            width: 91.666667%;
+          }
+        
+          .wk-ipadp-12 {
+            width: 100%;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .wk-tab-1 {
+            width: 8.333333%;
+          }
+        
+          .wk-tab-2 {
+            width: 16.666667%;
+          }
+        
+          .wk-tab-3 {
+            width: 25%;
+          }
+        
+          .wk-tab-4 {
+            width: 33.333333%;
+          }
+        
+          .wk-tab-5 {
+            width: 41.666667%;
+          }
+        
+          .wk-tab-6 {
+            width: 50%;
+          }
+        
+          .wk-tab-7 {
+            width: 58.333333%;
+          }
+        
+          .wk-tab-8 {
+            width: 66.666667%;
+          }
+        
+          .wk-tab-9 {
+            width: 75%;
+          }
+        
+          .wk-tab-10 {
+            width: 83.333333%;
+          }
+        
+          .wk-tab-11 {
+            width: 91.666667%;
+          }
+        
+          .wk-tab-12 {
+            width: 100%;
+          }
+        }
+        
+        @media (max-width: 500px) {
+          .wk-mobile-1 {
+            width: 8.333333%;
+          }
+        
+          .wk-mobile-2 {
+            width: 16.666667%;
+          }
+        
+          .wk-mobile-3 {
+            width: 25%;
+          }
+        
+          .wk-mobile-4 {
+            width: 33.333333%;
+          }
+        
+          .wk-mobile-5 {
+            width: 41.666667%;
+          }
+        
+          .wk-mobile-6 {
+            width: 50%;
+          }
+        
+          .wk-mobile-7 {
+            width: 58.333333%;
+          }
+        
+          .wk-mobile-8 {
+            width: 66.666667%;
+          }
+        
+          .wk-mobile-9 {
+            width: 75%;
+          }
+        
+          .wk-mobile-10 {
+            width: 83.333333%;
+          }
+        
+          .wk-mobile-11 {
+            width: 91.666667%;
+          }
+        
+          .wk-mobile-12 {
+            width: 100%;
+          }
+        }
+
+        * {
+            font-family: Nunito, sans-serif;
+          }
+
+        body {
+          margin: 0;
+          text-align: center;
+          font-family: Arial, sans-serif;
+          padding: 0;
+        }
+
+        .responsive-container-block {
+          max-width: 1380px;
+          margin: 60px auto;
+          padding: 0 30px;
+        }
+
+        .text-blk {
+          margin: 0;
+          line-height: 25px;
+        }
+
+        .container-block {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+        }
+
+        .card {
+          text-align: center;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 30px 25px;
+          width: 280px;
+          margin: 0 10px 25px;
+        }
+
+        .team-image-wrapper {
+          clip-path: circle(50% at 50% 50%);
+          width: 130px;
+          height: 130px;
+        }
+
+        .team-member-image {
+          max-width: 100%;
+        }
+
+        .name {
+          margin: 20px 0 5px;
+          font-size: 18px;
+          font-weight: 800;
+        }
+
+        .position {
+          margin: 0;
+        }
+
+        .feature-text {
+          margin: 0 0 20px;
+          color: rgb(122, 122, 122);
+          line-height: 30px;
+        }
+
+        .social-icons {
+          width: 70px;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        @media (max-width: 1024px) {
+          .card {
+            width: 25%;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .card {
+            width: 33.333333%;
+          }
+        }
+
+        @media (max-width: 500px) {
+          .card {
+            width: 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+    <h3 >Welcome to ByteForge Solutions</h3>
+    <p class="text-blk team-head-text">Our Team</p>
+
+    <div class="responsive-container-block container">
+      <div class="container-block">
+        <div class="card">
+          <div class="team-image-wrapper">
+            <img class="team-member-image" src="founder.jpg" alt="Founder">
+          </div>
+          <p class="name">John Smith</p>
+          <p class="position">Founder</p>
+          <p class="feature-text">John Smith, the visionary behind ByteForge Solutions, boasts over two decades of tech industry experience, driving innovation and propelling the company from startup to industry leader with his unwavering commitment to excellence. His leadership inspires the team to push boundaries and achieve greatness.</p>
+          <div class="social-icons">
+            <a href="https://www.twitter.com" target="_blank">
+              <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+            </a>
+          </div>
+        </div>
+        <div class="card">
+            <div class="team-image-wrapper">
+              <img class="team-member-image" src="subfounder.jpg" alt="Co-Founder">
+            </div>
+            <p class="name">David Johnson </p>
+            <p class="position">Co-Founder</p>
+            <p class="feature-text">Subfounder:
+                As co-founder of ByteForge Solutions, David Johnson taps into his design expertise and inventive mindset to fuel innovation. His collaborative leadership cultivates a culture of creativity and exploration, resulting in pioneering solutions.</p>
+            <div class="social-icons">
+              <a href="https://www.twitter.com" target="_blank">
+                <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+              </a>
+              <a href="https://www.facebook.com" target="_blank">
+                <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+              </a>
+            </div>
+          </div>
+        <div class="card">
+            <div class="team-image-wrapper">
+              <img class="team-member-image" src="CEO.jpg" alt="CEO">
+            </div>
+            <p class="name">David Smith</p>
+            <p class="position">CEO</p>
+            <p class="feature-text">David Smith, with over two decades of tech industry experience, leads ByteForge Solutions with a focus on innovation and strategic vision, propelling the company's growth and leadership in the industry.</p>
+            <div class="social-icons">
+              <a href="https://www.twitter.com" target="_blank">
+                <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+              </a>
+              <a href="https://www.facebook.com" target="_blank">
+                <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="team-image-wrapper">
+              <img class="team-member-image" src="subCeo.jpg" alt="Sub-CEO">
+            </div>
+            <p class="name">Laura Johnson</p>
+            <p class="position">Sub-CEO</p>
+            <p class="feature-text">Laura Johnson, a finance and strategic management expert, collaborates closely with the CEO to drive ByteForge Solutions' vision and growth, leveraging her analytical prowess and strategic acumen.</p>
+            <div class="social-icons">
+              <a href="https://www.twitter.com" target="_blank">
+                <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+              </a>
+              <a href="https://www.facebook.com" target="_blank">
+                <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="team-image-wrapper">
+              <img class="team-member-image" src="software_team.jpg" alt="Software Team">
+            </div>
+            <p class="name">Emily Roberts</p>
+            <p class="position">Software Team</p>
+            <p class="feature-text">Under the leadership of Emily Roberts, ByteForge Solutions' software team pioneers cutting-edge solutions. Each member's unique expertise converges to create powerful, user-friendly products, pushing technological boundaries.</p>
+            <div class="social-icons">
+              <a href="https://www.twitter.com" target="_blank">
+                <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+              </a>
+              <a href="https://www.facebook.com" target="_blank">
+                <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="team-image-wrapper">
+              <img class="team-member-image" src="hr_team.jpg" alt="HRTeam">
+            </div>
+            <p class="name"> Alex Johnson's</p>
+            <p class="position">HR-Director</p>
+            <p class="feature-text">Under HR Director Alex Johnson's guidance, ByteForge Solutions' HR team cultivates an inclusive environment. Their dedication to employee well-being and development underscores the company's commitment to excellence.</p>
+            <div class="social-icons">
+              <a href="https://www.twitter.com" target="_blank">
+                <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+              </a>
+              <a href="https://www.facebook.com" target="_blank">
+                <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="team-image-wrapper">
+              <img class="team-member-image" src="sales_marketing.jpg" alt="">
+            </div>
+            <p class="name">Sarah Johnson</p>
+            <p class="position">Sales and Marketing Team</p>
+            <p class="feature-text">Led by Sarah Johnson, ByteForge Solutions' dynamic sales and marketing team spearheads global expansion. With strategic initiatives and innovative campaigns, they solidify the company's presence and attract clients worldwide.</p>
+            <div class="social-icons">
+              <a href="https://www.twitter.com" target="_blank">
+                <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+              </a>
+              <a href="https://www.facebook.com" target="_blank">
+                <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
